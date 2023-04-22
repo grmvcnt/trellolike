@@ -1,24 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}trellolike - Home{% endblock %}
 
 {% block body %}
-<style>
-</style>
-
-<div class="w-100">
-    <nav class="w-100 px-3 bg-light d-flex justify-content-between align-items-center">
-        <h1 class="display-4">TrelloLike</h1>
-        <div class="" role="group" aria-label="Basic example">
-            <a class="btn btn-secondary me-1">S'inscrire</a>
-            <a class="btn btn-primary">Se connecter</a>
-        </div>
-    </nav>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/vince/EEMI/trellolike/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/vince/EEMI/trellolike/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Bienvenue sur la page d'accueil de trellolike.</h1>
+        <p class="lead">trellolike est un projet scolaire ayant pour but de reproduire la plupart des fonctionnalités que l'on retrouve dans l'application Trello.</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Inscription</a>
+        </p>
+    </div>
 </div>
 {% endblock %}
