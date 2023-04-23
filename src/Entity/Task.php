@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\TaskRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=TaskRepository::class)
@@ -20,21 +21,25 @@ class Task
     /**
      * @ORM\Column(type="string", length=255)
      */
+    #[Assert\NotNull]
     private $title;
 
     /**
      * @ORM\Column(type="text")
      */
+    #[Assert\NotNull]
     private $content;
 
     /**
      * @ORM\Column(type="datetime")
      */
+    #[Assert\NotNull]
     private $created_at;
 
     /**
      * @ORM\Column(type="datetime")
      */
+    #[Assert\NotNull]
     private $updated_at;
 
     /**

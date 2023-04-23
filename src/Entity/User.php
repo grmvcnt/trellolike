@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -21,16 +22,19 @@ class User
     /**
      * @ORM\Column(type="string", length=255)
      */
+    #[Assert\NotNull]
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
+    #[Assert\NotNull]
     private $first_name;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
+    #[Assert\NotNull]
     private $last_name;
 
     public function getId(): ?int
